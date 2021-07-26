@@ -6,6 +6,7 @@ services:
  - docker build -t  laxman13/docker-reactapp -f Dockerfile.dev .
 
  script:
- - docker run laxman13/docker-reactapp npm run test -- --coverage 
+ 
+  - docker run -e CI=true laxman13/docker-reactapp npm run test
 
 
