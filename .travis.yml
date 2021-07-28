@@ -9,3 +9,9 @@ before_install:
 
 script:
   - docker run -e CI=true laxman/docker-reactjs npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-west-2"
+  app: "docker"
+  
